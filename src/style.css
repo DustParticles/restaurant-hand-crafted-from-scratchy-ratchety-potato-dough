@@ -4,6 +4,7 @@ html {
 
 body {
   margin: 0px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 button {
@@ -44,6 +45,7 @@ header {
   height: 1000px;
   object-fit: cover;
   object-position: top;
+  display: block;
 }
 
 .tab-group {
@@ -86,8 +88,53 @@ header {
 }
 
 main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   grid-row: 2/3;
   grid-column: 1/2;
+}
+
+.home-page-contents-text-contents {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 20px;
+  border-radius: 5px;
+  background-color: #40373752;
+}
+
+.home-page-contents {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.home-page-text-1 {
+  font-size: 5.2rem;
+  margin: 0px;
+  color: white;
+}
+
+.home-page-text-2 {
+  font-size: 2.2rem;
+  margin: 0px;
+  color: white;
+}
+
+.home-page-text-3 {
+  font-size: 4.2rem;
+  margin: 0px;
+  color: white;
+}
+
+.order-button {
+  width: 250px;
 }
 
 footer {
