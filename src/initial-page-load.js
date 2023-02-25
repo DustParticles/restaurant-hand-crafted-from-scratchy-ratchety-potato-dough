@@ -1,4 +1,4 @@
-import setAttributes from "./setAttributes";
+import setAttributes from "./helperFunctions";
 import amogus from "./Images/RATTTTTT.jpg";
 import diningArea from "./Images/k8-sWEpcc0Rm0U-unsplash.jpg";
 import loadHomePageContents from "./home-page";
