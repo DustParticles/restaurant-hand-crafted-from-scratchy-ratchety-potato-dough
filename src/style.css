@@ -1,3 +1,8 @@
+@font-face {
+  font-family: creepster;
+  src: url(Fonts/Creepster-Regular.ttf);
+}
+
 html {
   font: 62.5%;
 }
@@ -97,6 +102,13 @@ main {
   grid-column: 1/2;
 }
 
+.home-page-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .home-page-contents-text-contents {
   display: flex;
   flex-direction: column;
@@ -120,6 +132,8 @@ main {
   font-size: 5.2rem;
   margin: 0px;
   color: white;
+  font-family: creepster;
+  text-align: center;
 }
 
 .home-page-text-2 {
@@ -182,6 +196,11 @@ svg.grey-star {
 }
 
 .review-comment {
+  font-family: "creepster";
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  max-width: 336px;
+  text-align: center;
 }
 
 .review-profile-holder {
