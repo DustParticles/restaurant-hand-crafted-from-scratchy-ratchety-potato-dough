@@ -61,6 +61,55 @@ function addRatingStars(amountOfStarsGiven) {
   return ratingContainer;
 }
 
+function createReviewCard(img, ratingAmount, comment, personName) {
+  // create container
+  const reviewCard = createElement("div", { class: "review-card" });
+
+  // create profile image container
+  const profileImageContainer = createElement("div", {
+    class: "review-profile-holder",
+  });
+
+  // create image
+  const profilePicture = createElement("img", {
+    src: img[0],
+    alt: img[1],
+    class: img[2],
+  });
+
+  // create container to house the rating stars and comments
+  const reviewContainer = createElement("div", {
+    class: "review-container",
+  });
+
+  // create rating
+  const rating = addRatingStars(ratingAmount);
+
+  // create comment container
+  const reviewComment = createElement("p", { class: "review-comment" });
+
+  // Add text to reviewComment
+  reviewComment.innerText = comment;
+
+  // create name
+  const reviewerName = createElement("p", { class: "reviewer-name" });
+
+  // Add text to reviewerName
+  reviewerName.innerText = personName;
+
+  // Append profilePicture into profileImageContainer
+  profileImageContainer.appendChild(profilePicture);
+
+  // Append rating, reviewComment, and reviewerName into reviewContainer
+  reviewContainer.append(rating, reviewComment, reviewerName);
+
+  // Append profilePicture and reviewContainer into reviewCard
+  reviewCard.append(profilePicture, reviewContainer);
+
+  // return reviewCard element
+  return reviewCard;
+}
+
 export default createElement;
 
-export { setAttribute, createSVG, addRatingStars };
+export { setAttribute, createSVG, addRatingStars, createReviewCard };

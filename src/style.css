@@ -155,9 +155,12 @@ main {
 .reviews {
   display: flex;
   background-color: #ff5959;
-  height: 420px;
+  flex: 2;
+  flex-basis: 300px;
   width: 100vw;
   gap: 15px;
+  padding: 20px 0px;
+  flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
 }
@@ -174,7 +177,7 @@ main {
   width: 120px;
   height: 120px;
   object-fit: cover;
-  object-position: right;
+  object-position: center;
   border-radius: 100%;
 }
 
@@ -193,14 +196,21 @@ svg.grey-star {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  gap: 10px;
 }
 
-.review-comment {
+.review-comment,
+.reviewer-name {
   font-family: "creepster";
   word-break: break-word;
   overflow-wrap: anywhere;
-  max-width: 336px;
+  max-width: 200px;
+  margin: 0px;
   text-align: center;
+}
+
+.reviewer-name::before {
+  content: " - ";
 }
 
 .review-profile-holder {
