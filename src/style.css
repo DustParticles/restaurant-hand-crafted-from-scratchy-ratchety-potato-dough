@@ -47,7 +47,7 @@ header {
 
 .background-image {
   width: 100vw;
-  height: 1000px;
+  height: 100vh;
   object-fit: cover;
   object-position: top;
   display: block;
@@ -77,15 +77,13 @@ header {
 .menu-button,
 .contact-button {
   z-index: 10;
-
   font-weight: 800;
-
   font-family: cursive;
-  font-size: min(2.5vw, 40px);
-
+  font-size: clamp(20px, 3.5vw, 40px);
   background-color: rgba(240, 248, 255, 0);
   color: #1c1917;
 }
+
 .home-button:active,
 .menu-button:active,
 .contact-button:active {
@@ -119,6 +117,16 @@ main {
   background-color: #40373752;
 }
 
+.home-button,
+.menu-button,
+.contact-button {
+  z-index: 10;
+  font-weight: 800;
+  font-family: cursive;
+  font-size: clamp(20px, 3.5vw, 40px);
+  background-color: rgba(240, 248, 255, 0);
+  color: #1c1917;
+}
 .home-page-contents {
   display: flex;
   position: absolute;
@@ -129,7 +137,7 @@ main {
 }
 
 .home-page-text-1 {
-  font-size: 5.2rem;
+  font-size: clamp(30.75px, 8.2vw, 120px);
   margin: 0px;
   color: white;
   font-family: creepster;
@@ -137,20 +145,27 @@ main {
 }
 
 .home-page-text-2 {
-  font-size: 2.2rem;
-  margin: 0px;
-  color: white;
-}
-
-.home-page-text-3 {
-  font-size: 4.2rem;
+  font-size: clamp(16px, 2.2vw, 10rem);
   margin: 0px;
   color: white;
 }
 
 .order-button {
-  width: 250px;
+  width: clamp(145px, 25vw, 290px);
+  height: clamp(42px, 3.2vw, 69px);
+  font-size: clamp(16px, 2.2vw, 2.1rem);
 }
+
+/* .order-button {
+    min-width: 158px;
+    min-height: 48px;
+    width: 14vw;
+    height: 3.2vw;
+    font-size: clamp(25px, 50%, 100px);
+    max-height: 80px;
+    max-width: 240px;
+    font-size: 2.6vww;
+} */
 
 .reviews {
   display: flex;
@@ -199,12 +214,16 @@ svg.grey-star {
   gap: 10px;
 }
 
+.review-comment {
+  font-size: clamp(19px, 1.5vw, 50px);
+  width: clamp(190px, 14vw, 269px);
+}
+
 .review-comment,
 .reviewer-name {
   font-family: "creepster";
   word-break: break-word;
   overflow-wrap: anywhere;
-  max-width: 200px;
   margin: 0px;
   text-align: center;
 }
