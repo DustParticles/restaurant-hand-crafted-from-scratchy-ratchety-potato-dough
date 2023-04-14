@@ -14,7 +14,7 @@ const footer = document.createElement("footer");
 
 // Create elements
 const tabGroup = document.createElement("div");
-
+/* const jimmy = document.createElement("div"); */
 const homeTab = document.createElement("button");
 const menuTab = document.createElement("button");
 const contactTab = document.createElement("button");
@@ -25,6 +25,7 @@ document.addEventListener("click", loadHomePageContents);
 
 export default function firstLoad() {
   // Set attributes
+  /*  jimmy.classList.add("jimmy"); */
   tabGroup.setAttribute("class", "tab-group");
   homeTab.setAttribute("class", "home-button");
   menuTab.setAttribute("class", "menu-button");
@@ -38,10 +39,11 @@ export default function firstLoad() {
   footerText.innerText = `Copyright ${new Date().getFullYear()} | Contact | Email`;
 
   // Append contents to elements
+  /* jimmy.append(homeTab, menuTab, contactTab); */
   tabGroup.appendChild(homeTab);
   tabGroup.appendChild(menuTab);
   tabGroup.appendChild(contactTab);
-
+  /*   tabGroup.appendChild(jimmy); */
   header.appendChild(tabGroup);
 
   footer.appendChild(footerText);
