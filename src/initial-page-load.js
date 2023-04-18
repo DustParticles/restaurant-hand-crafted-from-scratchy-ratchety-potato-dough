@@ -22,9 +22,11 @@ const restaurantLogoImage = createElement("img", {
 
 const navBarContainer = document.createElement("div");
 const tabGroup = document.createElement("div");
-const homeTab = document.createElement("button");
-const menuTab = document.createElement("button");
-const contactTab = document.createElement("button");
+const homeTab = document.createElement("a");
+const menuTab = document.createElement("a");
+const contactTab = document.createElement("a");
+
+const verticalLine = document.createElement("div");
 
 const footerText = document.createElement("p");
 
@@ -38,6 +40,8 @@ export default function firstLoad() {
   menuTab.setAttribute("class", "menu-button");
   contactTab.setAttribute("class", "contact-button");
 
+  verticalLine.setAttribute("class", "nav-vertical-line");
+
   // Give elements values/content/text
   homeTab.innerText = "Home";
   menuTab.innerText = "Menu";
@@ -47,7 +51,13 @@ export default function firstLoad() {
 
   // Append contents to elements
 
-  tabGroup.append(homeTab, menuTab, contactTab);
+  tabGroup.append(
+    homeTab,
+    verticalLine.cloneNode(true),
+    menuTab,
+    verticalLine.cloneNode(true),
+    contactTab
+  );
 
   navBarContainer.append(restaurantLogoImage, tabGroup);
 
