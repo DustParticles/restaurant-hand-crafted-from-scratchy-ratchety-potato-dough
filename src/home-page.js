@@ -1,15 +1,20 @@
-import diningArea from "./Images/k8-sWEpcc0Rm0U-unsplash.jpg";
-import createElement, { createReviewCard } from "./helperFunctions";
-import { header, main, footer, homeTab } from "./initial-page-load";
+import diningArea from "./Images/foodCriticGuyFromRatapooie.jpeg";
+import { createElement, createReviewCard } from "./helperFunctions";
+import { main } from "./initial-page-load";
 import ratImage from "./Images/aRatCookin.jpg";
 import larryTheCucumber from "./Images/larryCucumberInDiningPLace.jpeg";
 import bobTheTomato from "./Images/bobTheTomato.jpg";
 import mrPotato from "./Images/mrPotatoHead.png";
+import restaurantLogo from "./Images/GusteauLOGO.png";
 // remove any highlight on tab button that is not home
 // highlight home tab button when clicked
 // remove content so that home tab contents can be filled
 
-// TODO ADD REVIEW SECTION WITH REVIEWS
+const restaurantLogoImage = createElement("img", {
+  src: restaurantLogo,
+  alt: "Restaurant Logo",
+  class: "restaurant-logo",
+});
 
 const mainImage = createElement("img", {
   src: diningArea,

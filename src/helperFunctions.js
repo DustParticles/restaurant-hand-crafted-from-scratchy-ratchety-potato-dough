@@ -61,7 +61,7 @@ function addRatingStars(amountOfStarsGiven) {
   return ratingContainer;
 }
 
-function createReviewCard(img, ratingAmount, comment, personName) {
+function createReviewCard(imageAttributes, ratingAmount, comment, personName) {
   // create container
   const reviewCard = createElement("div", { class: "review-card" });
 
@@ -72,9 +72,9 @@ function createReviewCard(img, ratingAmount, comment, personName) {
 
   // create image
   const profilePicture = createElement("img", {
-    src: img[0],
-    alt: img[1],
-    class: img[2],
+    src: imageAttributes[0],
+    alt: imageAttributes[1],
+    class: imageAttributes[2],
   });
 
   // create container to house the rating stars and comments
@@ -110,6 +110,10 @@ function createReviewCard(img, ratingAmount, comment, personName) {
   return reviewCard;
 }
 
-export default createElement;
-
-export { setAttribute, createSVG, addRatingStars, createReviewCard };
+export {
+  createElement,
+  setAttribute,
+  createSVG,
+  addRatingStars,
+  createReviewCard,
+};
