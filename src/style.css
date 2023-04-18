@@ -90,6 +90,17 @@ header {
   justify-content: center;
 }
 
+.tab-group > button:nth-child(1) {
+  border: 0px;
+}
+
+.tab-group > button {
+  display: inline-block;
+  border-left: 1px solid black;
+  padding-left: 10px;
+  border-radius: 0px;
+}
+
 .home-button,
 .menu-button,
 .contact-button {
