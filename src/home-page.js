@@ -47,7 +47,7 @@ let [reviewCard1, reviewCard2, reviewCard3, reviewCard4] = [
 // Set the elements text contents
 
 homePageText1.innerText = "Worst food in the world!";
-homePageText2.innerText = "- Made by unpaid workers.";
+homePageText2.innerText = "- Anton Ego";
 orderButton.innerText = "Order Now";
 
 // Append elements inside one another
@@ -73,7 +73,7 @@ reviewCard2 = createReviewCard(
 reviewCard3 = createReviewCard(
   [larryTheCucumber, "Larry The Cucumber", "review-profile-picture"],
   5,
-  "The staff are currently giving me tour of their back kitchen they said they have something special for me we lit",
+  "The staff is currently giving me tour of their back kitchen they said they have something special for me we lit",
   "Larry The Cucumber"
 );
 

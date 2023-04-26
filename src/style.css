@@ -68,11 +68,11 @@ header {
 
 .nav-bar-container {
   display: grid;
-  grid-template-columns: 1fr 10fr;
+  grid-template-columns: 1fr 15fr;
   grid-template-rows: clamp(50px, 5vw, 69px);
   position: fixed;
   flex-direction: row;
-  background-color: #ef4444;
+  background-color: #cca363;
   width: 100%;
   /* height: clamp(50px, 5vw, 69px); */
   padding: 6px;
@@ -93,27 +93,8 @@ header {
 .nav-vertical-line {
   height: clamp(20px, 2.5vw, 30px);
   width: 3px;
-  background: black;
+  background: #772327;
 }
-
-/* .tab-group > a:nth-child(1) {
-  border: 0px;
-} */
-
-/* .tab-group > a:before {
-  content: "​";
-  display: inline-block;
-  border-left: 3px solid black;
-  padding-left: 10px;
-  border-radius: 0px;
-} */
-
-/* .tab-group > a {
-  display: inline-block;
-  border-left: 1px solid black;
-  padding-left: 10px;
-  border-radius: 0px;
-} */
 
 .home-button,
 .menu-button,
@@ -123,13 +104,19 @@ header {
   font-family: cursive;
   font-size: clamp(20px, 3.5vw, 40px);
   background-color: rgba(240, 248, 255, 0);
-  color: #1c1917;
+  color: #43151b;
+}
+
+.home-button:hover,
+.menu-button:hover,
+.contact-button:hover {
+  color: #4e2026;
 }
 
 .home-button:active,
 .menu-button:active,
 .contact-button:active {
-  color: #78716c;
+  color: #400e14;
 }
 
 main {
@@ -155,7 +142,7 @@ main {
   justify-content: center;
   padding: 10px 20px;
   border-radius: 5px;
-  background-color: #40373752;
+  background-color: #00000012;
 }
 
 .home-page-contents {
@@ -170,21 +157,43 @@ main {
 .home-page-text-1 {
   font-size: clamp(30.75px, 8.2vw, 120px);
   margin: 0px;
-  color: white;
+  color: #43151b;
   font-family: creepster;
   text-align: center;
+  -webkit-text-stroke: 2px #2a0e10;
+  text-shadow: 3px 3px 2px black;
 }
 
 .home-page-text-2 {
   font-size: clamp(16px, 2.2vw, 10rem);
   margin: 0px;
-  color: white;
+  color: #3e2723;
+  text-shadow: 1px 1px 1px #000000;
+  font-family: "creepster";
 }
 
 .order-button {
   width: clamp(145px, 25vw, 290px);
   height: clamp(42px, 3.2vw, 69px);
   font-size: clamp(16px, 2.2vw, 2.1rem);
+  color: #616161;
+  -webkit-text-stroke: 1px #616161;
+  background-color: #eceff1;
+  transition: 150ms;
+}
+
+.order-button:hover {
+  transition: 150ms;
+  background-color: #fafafa;
+  color: #757575;
+  -webkit-text-stroke: 1px #757575;
+}
+
+.order-button:active {
+  transition: 150ms;
+  color: #424242;
+  -webkit-text-stroke: 1px #424242;
+  background-color: #eeeeee;
 }
 
 /* .order-button {
@@ -200,7 +209,7 @@ main {
 
 .reviews {
   display: flex;
-  background-color: #ff5959;
+  background-color: #3e2723;
   flex: 2;
   flex-basis: 300px;
   width: 100%;
@@ -209,6 +218,7 @@ main {
   flex-wrap: wrap;
   justify-content: space-evenly;
   align-items: center;
+  outline: 2px solid #404b4f;
 }
 
 .review-card {
@@ -225,6 +235,7 @@ main {
   object-fit: cover;
   object-position: center;
   border-radius: 100%;
+  outline: 2px solid #8d6e63;
 }
 
 .rating-container {
@@ -256,7 +267,12 @@ svg.grey-star {
   word-break: break-word;
   overflow-wrap: anywhere;
   margin: 0px;
+  color: #bcaaa4;
   text-align: center;
+}
+
+.reviewer-name {
+  color: #a1887f;
 }
 
 .reviewer-name::before {
@@ -268,15 +284,12 @@ svg.grey-star {
 
 footer {
   display: flex;
-
   width: 100%;
-
   justify-self: center;
   justify-content: center;
   align-items: flex-end;
-
   grid-row: 3/4;
   grid-column: 1/2;
-
-  background-color: lightblue;
+  color: #6d4c41;
+  background-color: #d7ccc8;
 }
