@@ -27,7 +27,7 @@ button:hover {
 
 #content {
   display: grid;
-  grid-template-rows: 1fr 10fr 5fr;
+  grid-template-rows: 1fr 15fr 1fr;
   grid-template-columns: 1fr;
   height: 100vh;
 }
