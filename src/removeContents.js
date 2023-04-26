@@ -1,4 +1,6 @@
-// TODO
+const main = document.querySelector("main");
 
-// Give the contents a class name so that you can remove them EZ
-function removePageContents() {}
+export default function removePageContents() {
+  // Clear all children elements
+  main.innerHTML = "";
+}
