@@ -30,7 +30,7 @@ const verticalLine = document.createElement("div");
 
 const footerText = document.createElement("p");
 
-document.addEventListener("click", loadHomePageContents);
+homeTab.addEventListener("click", loadHomePageContents);
 
 export default function firstLoad() {
   // Set attributes

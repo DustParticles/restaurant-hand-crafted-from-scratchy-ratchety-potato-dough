@@ -1,6 +1,6 @@
-const main = document.querySelector("main");
+import { main } from "./initial-page-load";
 
 export default function removePageContents() {
   // Clear all children elements
-  main.innerHTML = "";
+  document.querySelector("#content > main").textContent = "";
 }
