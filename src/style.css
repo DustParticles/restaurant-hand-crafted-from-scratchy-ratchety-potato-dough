@@ -122,6 +122,7 @@ main {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
 
   grid-row: 2/3;
   grid-column: 1/2;
@@ -134,6 +135,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  width: 100%;
 }
 
 .home-page-contents-text-contents {
@@ -276,12 +278,22 @@ svg.grey-star {
 .phone-support-container,
 .email-container,
 .chat-support-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .phone-support-icon,
 .email-support-icon,
 .chatting-gif {
   width: 75px;
+}
+
+.phone-support-number,
+.email-address-support-text,
+.chatting-support-text {
+  margin: 0px;
 }
 
 footer {
