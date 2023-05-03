@@ -1,20 +1,11 @@
 import diningArea from "./Images/foodCriticGuyFromRatapooie.jpeg";
+import removePageContents from "./removeContents";
 import { createElement, createReviewCard } from "./helperFunctions";
 import { main } from "./initial-page-load";
 import ratImage from "./Images/aRatCookin.jpg";
 import larryTheCucumber from "./Images/larryCucumberInDiningPLace.jpeg";
 import bobTheTomato from "./Images/bobTheTomato.jpg";
 import mrPotato from "./Images/mrPotatoHead.png";
-import restaurantLogo from "./Images/GusteauLOGO.png";
-// remove any highlight on tab button that is not home
-// highlight home tab button when clicked
-// remove content so that home tab contents can be filled
-
-const restaurantLogoImage = createElement("img", {
-  src: restaurantLogo,
-  alt: "Restaurant Logo",
-  class: "restaurant-logo",
-});
 
 const mainImage = createElement("img", {
   src: diningArea,
@@ -87,7 +78,10 @@ reviewCard4 = createReviewCard(
 reviews.append(reviewCard1, reviewCard2, reviewCard3, reviewCard4);
 
 export default function loadHomePageContents() {
-  /// do stuff
+  // remove contents
+  removePageContents();
+
+  // append new contents
   homePageSection.append(mainImage, homePageContents);
   main.append(homePageSection, reviews);
 }

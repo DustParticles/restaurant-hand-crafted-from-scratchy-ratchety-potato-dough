@@ -127,6 +127,8 @@ main {
   grid-column: 1/2;
 }
 
+/* HOME-PAGE STYLE SECTION */
+
 .home-page-section {
   display: flex;
   flex-direction: column;
@@ -268,6 +270,18 @@ svg.grey-star {
 }
 
 .review-profile-holder {
+}
+
+/* CONTACT-TAB STYLE SECTION */
+.phone-support-container,
+.email-container,
+.chat-support-container {
+}
+
+.phone-support-icon,
+.email-support-icon,
+.chatting-gif {
+  width: 75px;
 }
 
 footer {
