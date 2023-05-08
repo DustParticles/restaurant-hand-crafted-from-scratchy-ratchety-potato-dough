@@ -7,6 +7,10 @@ import larryTheCucumber from "./Images/larryCucumberInDiningPLace.jpeg";
 import bobTheTomato from "./Images/bobTheTomato.jpg";
 import mrPotato from "./Images/mrPotatoHead.png";
 
+const homePageContainer = createElement("div", {
+  class: "home-page-container",
+});
+
 const mainImage = createElement("img", {
   src: diningArea,
   alt: "People In Restaurant Dining Area Seated Waiting And Or Eating With Waiters Walking Around",
@@ -76,12 +80,13 @@ reviewCard4 = createReviewCard(
 );
 
 reviews.append(reviewCard1, reviewCard2, reviewCard3, reviewCard4);
+homePageSection.append(mainImage, homePageContents);
+homePageContainer.appendChild(homePageSection);
 
 export default function loadHomePageContents() {
   // remove contents
   removePageContents();
 
   // append new contents
-  homePageSection.append(mainImage, homePageContents);
-  main.append(homePageSection, reviews);
+  main.append(homePageContainer, reviews);
 }

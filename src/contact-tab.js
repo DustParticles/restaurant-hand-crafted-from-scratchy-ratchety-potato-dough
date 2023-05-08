@@ -3,9 +3,29 @@ import removePageContents from "./removeContents";
 import { main } from "./initial-page-load";
 import chattingGif from "./Images/Gifs/chatting.gif";
 
+const contactPageContainer = createElement("div", {
+  class: "contact-page-container",
+});
+
+const contactInfoGroup = createElement("div", {
+  class: "contact-info-group",
+});
+
+const contactPageMainText = createElement("p", {
+  class: "contact-page-main-text",
+});
+
+contactPageMainText.innerText = "Contact Us";
+
 // Phone number elements
 const phoneNumberSupportElement = createElement("div", {
   class: "phone-support-container",
+});
+const phoneSupportText = createElement("p", {
+  class: "support-title-text",
+});
+const phoneSupportTextDescription = createElement("p", {
+  class: "support-text-description",
 });
 const phoneSupportNumber = createElement("p", {
   class: "phone-support-number",
@@ -18,15 +38,28 @@ const supportAgentSvg = createSVG(
 
 // Give element value then append
 supportAgentSvg.setAttribute("class", "phone-support-icon");
+phoneSupportText.innerText = "Phone Number";
 phoneSupportNumber.innerText = "(248)-434-5508";
-phoneNumberSupportElement.append(supportAgentSvg, phoneSupportNumber);
+phoneSupportTextDescription.innerText = "Monday Through Friday";
+phoneNumberSupportElement.append(
+  supportAgentSvg,
+  phoneSupportText,
+  phoneSupportNumber,
+  phoneSupportTextDescription
+);
 
 // Email elements
 const emailElement = createElement("div", {
   class: "email-container",
 });
+const emailSupportText = createElement("p", {
+  class: "support-title-text",
+});
 const emailAddressText = createElement("p", {
   class: "email-address-support-text",
+});
+const emailSupportTextDescription = createElement("p", {
+  class: "support-text-description",
 });
 
 const emailSupportSvg = createSVG(
@@ -36,15 +69,25 @@ const emailSupportSvg = createSVG(
 
 // Give element value then append
 emailSupportSvg.setAttribute("class", "email-support-icon");
+emailSupportText.innerText = `Email`;
 emailAddressText.innerText = `example@mail.com`;
-emailElement.append(emailSupportSvg, emailAddressText);
+emailSupportTextDescription.innerText = `Monday Through Friday`;
+emailElement.append(
+  emailSupportSvg,
+  emailSupportText,
+  emailAddressText,
+  emailSupportTextDescription
+);
 
 // Chatting elements
 const chatSupportElement = createElement("div", {
   class: "chat-support-container",
 });
 const chattingSupportText = createElement("p", {
-  class: "chatting-support-text",
+  class: "support-title-text",
+});
+const chattingSupportTextDescription = createElement("p", {
+  class: "support-text-description",
 });
 
 const chattingGifElement = createElement("img", {
@@ -55,12 +98,27 @@ const chattingGifElement = createElement("img", {
 
 // Give element value then append
 chattingSupportText.innerText = "Chat Support";
-chatSupportElement.append(chattingGifElement, chattingSupportText);
+chattingSupportTextDescription.innerText = "24/7 Live Chatting";
+chatSupportElement.append(
+  chattingGifElement,
+  chattingSupportText,
+  chattingSupportTextDescription
+);
+
+// Append stuff into containers
+contactInfoGroup.append(
+  phoneNumberSupportElement,
+  emailElement,
+  chatSupportElement
+);
+
+contactPageContainer.append(contactPageMainText, contactInfoGroup);
 
 export default function contactPage() {
   main.textContent = "";
   removePageContents();
-  main.append(phoneNumberSupportElement, emailElement, chatSupportElement);
+
+  main.append(contactPageContainer);
 }
 
 /* 

@@ -12,6 +12,10 @@ body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
+p {
+  margin: 0px;
+}
+
 button {
   border: none;
   border-radius: 5px;
@@ -119,16 +123,22 @@ header {
 }
 
 main {
-  display: flex;
+  /*   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
+ */
   grid-row: 2/3;
   grid-column: 1/2;
 }
 
 /* HOME-PAGE STYLE SECTION */
+.home-page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
 .home-page-section {
   display: flex;
@@ -275,6 +285,25 @@ svg.grey-star {
 }
 
 /* CONTACT-TAB STYLE SECTION */
+.contact-page-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  height: 100%;
+  gap: 10px;
+}
+
+.contact-page-main-text {
+  font-size: clamp(2.5rem, 4vw, 4rem);
+}
+
+.contact-info-group {
+  display: flex;
+  gap: 10px;
+}
+
 .phone-support-container,
 .email-container,
 .chat-support-container {
@@ -282,6 +311,9 @@ svg.grey-star {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  outline: 2px solid black;
+  border-radius: 5px;
+  padding: 5px;
 }
 
 .phone-support-icon,
@@ -290,15 +322,25 @@ svg.grey-star {
   width: 75px;
 }
 
+.support-title-text {
+  font-weight: 900;
+  font-size: 1.6rem;
+}
+
+p.support-text-description {
+  color: gray;
+}
+
 .phone-support-number,
 .email-address-support-text,
-.chatting-support-text {
+.support-text-description {
   margin: 0px;
 }
 
 footer {
   display: flex;
   width: 100%;
+  padding: 16px;
   justify-self: center;
   justify-content: center;
   align-items: flex-end;
