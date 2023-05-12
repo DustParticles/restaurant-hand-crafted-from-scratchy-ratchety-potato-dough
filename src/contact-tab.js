@@ -6,7 +6,9 @@ import chattingGif from "./Images/Gifs/chatting.gif";
 const contactPageContainer = createElement("div", {
   class: "contact-page-container",
 });
-
+const contactInfoContainer = createElement("div", {
+  class: "contact-info-container",
+});
 const contactInfoGroup = createElement("div", {
   class: "contact-info-group",
 });
@@ -16,6 +18,51 @@ const contactPageMainText = createElement("p", {
 });
 
 contactPageMainText.innerText = "Contact Us";
+
+// Map elements
+const mapAddressContainer = createElement("div", {
+  class: "map-address-container",
+});
+
+const mapSvg = createSVG(
+  "black",
+  "M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z"
+);
+
+const mapTitleText = createElement("p", {
+  class: "support-title-text",
+});
+
+const mapAddressText = createElement("p", {
+  class: "map-address-text",
+});
+
+const storeCloseTimes = createElement("p", {
+  class: "store-closing-time",
+});
+
+const map = createElement("iframe", {
+  class: "map-location",
+  src: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d214587.41156412518!2d-96.73155255!3d32.82066454999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x864c19f77b45974b%3A0xb9ec9ba4f647678f!2sDallas%2C%20TX!5e0!3m2!1sen!2sus!4v1683605127072!5m2!1sen!2sus",
+  allowfullscreen: "",
+  loading: "lazy",
+  referrerpolicy: "no-referrer-when-downgrade",
+});
+
+mapSvg.setAttribute("class", "map-location-svg");
+
+mapTitleText.innerText = "Address:";
+
+mapAddressText.innerText = "P. Sherman, 42 Wallaby Way, Sydney";
+
+storeCloseTimes.innerText = "Open from Monday To Friday 9am-11pm";
+
+mapAddressContainer.append(
+  mapSvg,
+  mapTitleText,
+  mapAddressText,
+  storeCloseTimes
+);
 
 // Phone number elements
 const phoneNumberSupportElement = createElement("div", {
@@ -107,12 +154,17 @@ chatSupportElement.append(
 
 // Append stuff into containers
 contactInfoGroup.append(
+  contactPageMainText,
   phoneNumberSupportElement,
   emailElement,
-  chatSupportElement
+  chatSupportElement,
+  mapAddressContainer,
+  map
 );
 
-contactPageContainer.append(contactPageMainText, contactInfoGroup);
+contactInfoContainer.append(contactInfoGroup);
+
+contactPageContainer.append(contactInfoContainer);
 
 export default function contactPage() {
   main.textContent = "";
