@@ -13,11 +13,31 @@ const contactInfoGroup = createElement("div", {
   class: "contact-info-group",
 });
 
+const contactPageTextContainer = createElement("div", {
+  class: "contact-page-text-container",
+});
+
 const contactPageMainText = createElement("p", {
   class: "contact-page-main-text",
 });
 
+const aLiteralLine = createElement("div", {
+  class: "contact-page-line",
+});
+
+const contactDescription = createElement("p", {
+  class: "contact-page-text-description",
+});
+
 contactPageMainText.innerText = "Contact Us";
+contactDescription.innerText =
+  "We wont answer you! and if you keep trying we will personally go to your house and eat you";
+
+contactPageTextContainer.append(
+  contactPageMainText,
+  aLiteralLine,
+  contactDescription
+);
 
 // Map elements
 const mapAddressContainer = createElement("div", {
@@ -25,7 +45,7 @@ const mapAddressContainer = createElement("div", {
 });
 
 const mapSvg = createSVG(
-  "black",
+  "red",
   "M12,11.5A2.5,2.5 0 0,1 9.5,9A2.5,2.5 0 0,1 12,6.5A2.5,2.5 0 0,1 14.5,9A2.5,2.5 0 0,1 12,11.5M12,2A7,7 0 0,0 5,9C5,14.25 12,22 12,22C12,22 19,14.25 19,9A7,7 0 0,0 12,2Z"
 );
 
@@ -154,7 +174,7 @@ chatSupportElement.append(
 
 // Append stuff into containers
 contactInfoGroup.append(
-  contactPageMainText,
+  contactPageTextContainer,
   phoneNumberSupportElement,
   emailElement,
   chatSupportElement,

@@ -22,13 +22,21 @@ const restaurantLogoImage = createElement("img", {
 
 const navBarContainer = document.createElement("div");
 
-const [r, g, b] = [
-  Math.floor(Math.random() * 256),
-  Math.floor(Math.random() * 256),
-  Math.floor(Math.random() * 256),
-];
+function randomInteger(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
 
-navBarContainer.style.backgroundColor = `rgb(${r}, ${g}, ${b})`;
+function getRandomRgb() {
+  return [
+    randomInteger(50, 255),
+    randomInteger(50, 255),
+    randomInteger(50, 255),
+  ];
+}
+
+const rgb = getRandomRgb();
+
+navBarContainer.style.backgroundColor = `rgb(${rgb.join(", ")})`;
 const tabGroup = document.createElement("div");
 const homeTab = document.createElement("a");
 const menuTab = document.createElement("a");
@@ -76,24 +84,6 @@ export default function firstLoad() {
   content.append(header, main, footer);
 
   loadHomePageContents();
-  tester();
-}
-
-function getRandomRgb() {
-  return [
-    Math.floor(Math.random() * 256),
-    Math.floor(Math.random() * 256),
-    Math.floor(Math.random() * 256),
-  ];
-}
-
-function tester() {
-  const stars = document.querySelectorAll(".golden-star path");
-  const [r, g, b] = getRandomRgb();
-
-  stars.forEach((star) => {
-    star.fill = `rgb(${r}, ${g}, ${b})`;
-  });
 }
 
 export {
