@@ -290,6 +290,17 @@ svg.grey-star {
 .review-profile-holder {
 }
 
+/* MENU-TAB STYLE SECTION */
+.menu-background-image-container {
+  height: 100vh;
+}
+
+.dining-table-image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
 /* CONTACT-TAB STYLE SECTION */
 .contact-page-container {
   display: flex;

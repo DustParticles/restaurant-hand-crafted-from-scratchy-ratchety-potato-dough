@@ -43,10 +43,7 @@ const menuTab = document.createElement("a");
 const contactTab = document.createElement("a");
 
 const verticalLine = document.createElement("div");
-
 const footerText = document.createElement("p");
-
-homeTab.addEventListener("click", loadHomePageContents);
 
 export default function firstLoad() {
   // Set attributes
