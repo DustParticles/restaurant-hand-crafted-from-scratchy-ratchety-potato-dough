@@ -23,36 +23,53 @@ const menuSection2 = createElement("div", {
   class: "menu-section menu-section-2",
 });
 
-const menuItem1 = createElement("div", {
-  class: "menu-item-container",
-});
+/* begin here for item copying */
+function createMenuItem(title, price, description) {
+  /* add disclaimer text?
+   add line breaks?
+  */
+  const menuItem = createElement("div", {
+    class: "menu-item-container",
+  });
 
-const menuItemTitle = createElement("p", {
-  class: "menu-item-title ",
-});
+  const menuItemTitle = createElement("p", {
+    class: "menu-item-title ",
+  });
 
-const menuItemPrice = createElement("p", {
-  class: "menu-item-price",
-});
+  const menuItemPrice = createElement("p", {
+    class: "menu-item-price",
+  });
 
-const menuItemTitleContainer = createElement("div", {
-  class: "menu-title-container",
-});
+  const menuItemTitleContainer = createElement("div", {
+    class: "menu-title-container",
+  });
 
-const menuItemDescription = createElement("p", {
-  class: "menu-item-Description",
-});
+  const menuItemDescription = createElement("p", {
+    class: "menu-item-Description",
+  });
 
-menuItemPrice.innerText = "$69.99";
-menuItemTitle.innerText = "HUMAN MEAT";
-menuItemDescription.innerText = "MADE FROM THE FINEST HUMANS";
+  menuItemTitle.innerText = title;
+  menuItemPrice.innerText = price;
+  menuItemDescription.innerText = description;
 
-menuItemTitleContainer.append(menuItemTitle, menuItemPrice);
-menuItem1.append(menuItemTitleContainer, menuItemDescription);
+  menuItemTitleContainer.append(menuItemTitle, menuItemPrice);
+  menuItem.append(menuItemTitleContainer, menuItemDescription);
+
+  return menuItem;
+}
+/* stop here!!!!!!!!!!!! */
 
 menuTitle.innerText = "Menu";
-menuSection1.append(menuItem1.cloneNode(true));
-menuSection2.append(menuItem1.cloneNode(true));
+menuSection1.append(
+  createMenuItem("HUMAN MEAT", "$69.99", "MADE FROM THE FINEST HUMANS")
+);
+menuSection2.append(
+  createMenuItem(
+    "HUMAN FECES",
+    "$250",
+    "FECES MADE FRESH SOMEONE WILL GO TO YOUR TABLE AND WILL POOP ON YOUR PLATE *may taste like taco bell food"
+  )
+);
 menuContainer.append(menuTitle, menuSection1, menuSection2);
 
 const backgroundImageContainer = createElement("div", {
@@ -86,5 +103,6 @@ export default function menuPage() {
 
 
 
-MAKE MENU CONTAINER MAX WIDTH WAYYYYYY SMALLER!
+MAKE MENU CONTAINER MAX WIDTH WAYYYYYY SMALLER! 
+AND MAKE MENU CONTAINER  SCROLLABLE IF THERE ARE TOO MANY FOOD ITEMS
 */
